@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/css/styles.min.css" />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/AK.svg" />
+
+  <title>Arpit Radadiya | About Me</title>
+  <link rel="stylesheet" href="https://use.typekit.net/kse0maf.css" />
+</head>
+
+<body>
+  <div class="cursor-effect"></div>
+  <a href="../index.html" class="logo">
+    <img src="../assets/img/AK.svg" alt="" />
+  </a>
+
+  <section class="more-about">
+    <div class="container">
+      <div class="section-title">
+        <h2>Arpit <span>Radadiya </span>.</h2>
+      </div>
+      <div class="more-about-content">
+        <div class="more-about-img">
+          <img src="../assets/img/AK.jpg" alt="" />
+        </div>
+        <div class="more-about-text">
+          <p>I'm a passionate backend developer with expertise in HTML5, CSS3, Javascript, Media Query, SASS, jQuery,
+            Bootstrap, Tailwind CSS, C, C++, and DSA. With a strong educational background in back-end web development
+            and computer programming, I am equipped with the skills to build scalable solutions that provide seamless
+            user experiences.</p>
+          <br />
+          <p>We specialize in backend development and offer expertise in a wide range of technologies
+            including HTML5, CSS3, Javascript, Media Query, SASS, jQuery, C, C++, and DSA. Our goal is to build scalable
+            solutions that provide seamless user experiences.
+          </p>
+
+          <h3>Skills</h3>
+          <div class="skills">
+            <div class="skill-item">HTML5</div>
+            <div class="skill-item">CSS3/SASS</div>
+            <div class="skill-item">Javascript</div>
+            <div class="skill-item">Node JS</div>
+            <div class="skill-item">Express JS</div>
+            <div class="skill-item">TailwindCSS</div>
+            <div class="skill-item">Bootstrap</div>
+            <div class="skill-item">jQuery</div>
+            <div class="skill-item">C</div>
+            <div class="skill-item">C++</div>
+            <div class="skill-item">Vs Code</div>
+            <div class="skill-item">Git/Github</div>
+          </div>
+
+          <div class="tabs">
+            <button type="button" class="tab-item active" data-target="#education">Education</button>
+            <button type="button" class="tab-item" data-target="#experience">Experience</button>
+          </div>
+
+          <!-- Education -->
+          <div class="tab-content active" id="education">
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="date">April 2023 - Present </span>
+                <h4>Web Development -
+                  <span>Red & White Multimedia Education</span>
+                </h4>
+              </div>
+              <div class="timeline-item">
+                <span class="date">June 2023 - Present </span>
+                <h4>Bachelors of Computer Application -
+                  <span>Swarnim Startup & innovation University</span>
+                </h4>
+              </div>
+              <div class="timeline-item">
+                <span class="date">March 2023</span>
+                <h4>HSC -
+                  <span>Shree Kumar Vidhyalaya</span>
+                </h4>
+              </div>
+              <div class="timeline-item">
+                <span class="date">May 2021</span>
+                <h4>SSC -
+                  <span>Shree Aruni Saishanik Sankul</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience -->
+          <div class="tab-content" id="experience">
+            <p>Are you looking for a backend developer who can build scalable solutions for seamless user
+              experiences? Connect with me to discuss how I can help you achieve your goals.</p>
+          </div>
+
+          <div class="about-cta">
+            <a href="https://drive.google.com/file/d/1m8rRvBhjhuZpSS0Fhf8OCnhhkGTaAEhn/view?usp=sharing"
+              class="skills-cta">My resume</a>
+            <span>—</span>
+            <a href="../index.html#contact" class="exp-cta">Contact me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="../assets/js/app.js"></script>
+  <script>
+    const tabsContainer = document.querySelector(".tabs"),
+      moreAboutSection = document.querySelector(".more-about");
+
+    ////Select Tabs
+    tabsContainer.addEventListener("click", (e) => {
+      if (
+        e.target.classList.contains("tab-item") &&
+        !e.target.classList.contains("active")
+      ) {
+        tabsContainer.querySelector(".active").classList.remove("active");
+        e.target.classList.add("active");
+        const target = e.target.getAttribute("data-target");
+        moreAboutSection
+          .querySelector(".tab-content.active")
+          .classList.remove("active");
+        moreAboutSection.querySelector(target).classList.add("active");
+      }
+    });
+  </script>
+</body>
+
+</html>
